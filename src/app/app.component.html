@@ -1,0 +1,13 @@
+<custom-grid>
+
+  <ng-container #columns>
+    <clr-dg-column>Status</clr-dg-column>
+  </ng-container>
+
+  <ng-container #rows *ngFor="let item of items">
+    <clr-dg-row>
+      <clr-dg-cell>{{item.name}}</clr-dg-cell>
+    </clr-dg-row>
+  </ng-container>
+
+</custom-grid>

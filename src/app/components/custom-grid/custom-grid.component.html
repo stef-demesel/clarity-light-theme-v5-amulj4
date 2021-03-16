@@ -1,0 +1,22 @@
+<clr-datagrid class="o2c-Datagrid" #grid id="grid">
+
+  <!-- <ng-content *ngTemplateOutlet="'colums'"></ng-content>
+
+  <ng-content clr-datagridOutlet="'rows'"></ng-content> -->
+
+  <clr-dg-column>Status</clr-dg-column>
+
+  <clr-dg-row>
+    <clr-dg-cell>Unknown</clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-footer *ngIf="items && gridState">
+    <clr-dg-pagination #pagination [clrDgTotalItems]="total" [clrDgPageSize]="gridState.page!.size!"
+      [clrDgPage]="gridState.page!.current!" data-automation-id="grid-pagination">
+      <clr-dg-page-size [clrPageSizeOptions]="[10, 20, 50, 100]">itemsPerPage</clr-dg-page-size>
+      {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}}
+      items
+    </clr-dg-pagination>
+  </clr-dg-footer>
+
+</clr-datagrid>
